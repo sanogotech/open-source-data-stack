@@ -72,8 +72,12 @@ Airbyte-Airflow connection: set-up in Airflow admin connections with connector a
 The Airbyte task needs to contain the Airbyte connector ID contained in the connector URL.
 
 ### Airflow-Airbyte
-Connect Airflow to airbyte with a new connectio
-
+Connect Airflow to airbyte with a new connection
+```
+By default, if you are using the docker-compose example provided by airflow, the user is:
+user: airflow 
+password: airflow
+```
 ### DBT DAGs
 While it may be easier to run all DBT models with a single task in a DAG (Directed Acyclic Graph) file, this method runs the risk of performing excessive computational tasks despite a potential lack of updated data and is inflexible when performing debugging operations.
 
