@@ -78,6 +78,13 @@ By default, if you are using the docker-compose example provided by airflow, the
 user: airflow 
 password: airflow
 ```
+ 
+ ```
+ If you want to create another account with docker use this (you have to be in the same folder of the docker-compose.yaml file):
+
+docker-compose run airflow-worker airflow users create --role Admin --username admin --email admin --firstname admin --lastname admin --password admin
+ ```
+ 
 ### DBT DAGs
 While it may be easier to run all DBT models with a single task in a DAG (Directed Acyclic Graph) file, this method runs the risk of performing excessive computational tasks despite a potential lack of updated data and is inflexible when performing debugging operations.
 
